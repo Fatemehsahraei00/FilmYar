@@ -39,14 +39,6 @@ VITE_TMDB_TOKEN=...
 - فونت: **B Nazanin** (نصب‌شده روی سیستم) با fallback وب‌فونت **Vazirmatn**
 - اعداد فارسی، چیدمان RTL
 
-## نکته درباره React Bits Pro
-
-کامپوننت رسمی ASCII Tiles از رجیستری Pro با
-`npx shadcn@latest add @reactbits-starter/ascii-tiles-tw` نصب می‌شود اما به
-`REACTBITS_LICENSE_KEY` نیاز دارد که در اختیار من نبود؛ بنابراین معادل کاملی از همان
-افکت (کاشی‌های شیشه‌ای از کاراکترهای ASCII درخشان + واکنش به موس) در
-`AsciiTiles.jsx` پیاده‌سازی شده است. اگر کلید لایسنس را در `.env` بگذارید می‌توان
-نسخه رسمی را جایگزین کرد.
 
 ## اعتبار داده‌ها
 

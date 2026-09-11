@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: #301934;
+  --color-base-deep: #241126;
+  --color-surface: #3b2140;
+  --color-surface-2: #46284d;
+  --color-accent: #512888;
+  --color-accent-hover: #6a35ab;
+  --color-accent-soft: #9d7bd8;
+  --color-glow: #b98aee;
+  --color-ink: #f5effb;
+  --color-ink-dim: #c9b8dd;
+  --font-base: "B Nazanin", "BNazanin", "Nazanin", "Vazirmatn", Tahoma, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-base);
+  background: linear-gradient(180deg, #241126 0%, #301934 45%, #241126 100%);
+  color: var(--color-ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* B Nazanin runs light — bump weights for readability */
+body {
+  font-weight: 500;
+}
+
+::selection {
+  background: #512888;
+  color: #fff;
+}
+
+/* hide scrollbars on horizontal carousels */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* global scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #241126;
+}
+::-webkit-scrollbar-thumb {
+  background: #512888;
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+.skeleton {
+  background: linear-gradient(90deg, #3b2140 25%, #4a2b52 50%, #3b2140 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.35s ease both;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-rise-in {
+  animation: rise-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.animate-pop-in {
+  animation: pop-in 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.text-glow {
+  text-shadow: 0 0 24px rgba(185, 138, 238, 0.45);
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
